@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InputManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <p>
+    <Paire>
+      <code>X</code>
+      <name>Activate Item</name>
+    </Paire>
+    <Paire>
+      <code>S</code>
+      <name>Backward</name>
+    </Paire>
+    <Paire>
+      <code>F</code>
+      <name>Fly</name>
+    </Paire>
+    <Paire>
+      <code>Z</code>
+      <name>Forward</name>
+    </Paire>
+    <Paire>
+      <code>LeftShift</code>
+      <name>Go down</name>
+    </Paire>
+    <Paire>
+      <code>F1</code>
+      <name>Hide HUD</name>
+    </Paire>
+    <Paire>
+      <code>E</code>
+      <name>Inventory</name>
+    </Paire>
+    <Paire>
+      <code>Space</code>
+      <name>Jump</name>
+    </Paire>
+    <Paire>
+      <code>Q</code>
+      <name>Left</name>
+    </Paire>
+    <Paire>
+      <code>D</code>
+      <name>Right</name>
+    </Paire>
+    <Paire>
+      <code>F2</code>
+      <name>Screenshot</name>
+    </Paire>
+    <Paire>
+      <code>A</code>
+      <name>Spell</name>
+    </Paire>
+    <Paire>
+      <code>F3</code>
+      <name>Stats</name>
+    </Paire>
+  </p>
+  <sensitivity>5</sensitivity>
+  <soundLevel>0</soundLevel>
+</InputManager>

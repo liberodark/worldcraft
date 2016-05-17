@@ -1,0 +1,60 @@
+*** Easy Save 2 Changelog ***
+
+Current Version Number: 2.38
+
+v2.38
+
+- Major performance updates.
+- Added Playmaker actions to get dataPath, persistentDataPath and streamingAssetsPath.
+- Windows Phone 8, Windows Store and Playmaker functionality is now manually enabled from the ‘Assets/Easy Save 2’ menu.
+- Various small bug fixes.
+
+v2.37
+
+- Fixed issue where sometimes Unity wouldn't be able to parse the version number.
+- Fixed missing references in some examples.
+
+v2.35 & v2.36
+
+- Worked around a bug in Unity where compilation would fail when using iOS stripping and Dictionaries.
+- Fixed an issue where sometimes Unity would hang on import.
+
+v2.34
+
+- Easy Save now automatically disables Metro and WP8 files in Unity 3.5.
+- PlayMaker action is automatically enabled or disabled depending on whether PlayMaker is detected.
+- Fixed an issue where ES2Web would not work on WP8 and Metro.
+- Support for TreeInstance and Sprite has been temporarily disabled (support coming in a future update.
+
+v2.33
+
+- Updated the Easy Save Editor integration ('Assets/Easy Save 2' menu):
+	- Ability to Install, Update and Remove PlayMaker actions from 'Assets/Easy Save 2'.
+	- You can now clear the Default Save Folder from 'Assets/Easy Save 2'.
+	- Uninstall and Clean Up Easy Save 2 from 'Assets/Easy Save 2'.
+	- Menu items are now neatly organised.
+
+v2.32
+
+- Support added for Rect, Bounds, TreeInstance and Sprite classes.
+- ES2Web now allows you to choose whether to hash passwords using the hashType property.
+- ES2.php has been modified to allow easier integration with login systems.
+
+v2.31
+
+- Minor fixes for ES2Reader.
+- Error messages are more informative.
+
+v2.30
+
+- Added ES2Writer and ES2Reader for high performance saving and loading.
+- Major performance updates.
+
+v2.29
+
+- Support added for Windows Store (Metro).
+- Bugfixes for Windows Phone 8 support.
+- Added GetFiles(string path, string extension) method which allows you to get a list of files with a given extension.
+- Changelog is now included with Easy Save 2.
+- ES2 now uses two DLLs instead of many DLLs: ES2.dll and MoodkieSecurity.dll.
+- DLLs have been moved from /Plugins/Easy Save 2/Libraries/ to /Plugins/
