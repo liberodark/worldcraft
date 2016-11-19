@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using System;
 class ChunkBuilder {
 	
 	private static MeshBuilder meshData = new MeshBuilder();
@@ -13,7 +13,9 @@ class ChunkBuilder {
 	
 	public static void BuildChunkLighting(Mesh mesh, Chunk chunk) {
 		Build(chunk, true);
-		mesh.colors = meshData.GetColors().ToArray ();
+        Color[] colors = meshData.GetColors().ToArray();
+        Array.Resize(ref colors, mesh.colors.Length);
+		mesh.colors = colors;
 	}
 	
 	private static void Build(Chunk chunk, bool onlyLight) {
