@@ -100,10 +100,10 @@ public class Builder : MonoBehaviour {
 		{
 			Vector3i? point = GetCursor(true);
 			if(point.HasValue && point.Value.y >= 2) {
-				if (Network.peerType == NetworkPeerType.Disconnected)
-					map.SetBlockAndRecompute(new BlockData(), point.Value);
-				else
-					this.DestroyBlock(point.Value);
+                if (Network.peerType == NetworkPeerType.Disconnected)
+                    map.SetBlockAndRecompute(new BlockData(), point.Value);
+                else
+                    this.DestroyBlock(point.Value);
 
 				Vector3i around = new Vector3i(point.Value.x,point.Value.y,point.Value.z);
 
@@ -173,13 +173,13 @@ public class Builder : MonoBehaviour {
 		
 	}
 
-	void						DestroyBlock(Vector3i cursor_pos)
+	void DestroyBlock(Vector3i cursor_pos)
 	{
 		GetComponent<NetworkView>().RPC("RemoteDestroyBlock", RPCMode.All, (Vector3)cursor_pos);
 	}
 
 	[RPC]
-	void						RemoteDestroyBlock(Vector3 cursor_pos)
+	void RemoteDestroyBlock(Vector3 cursor_pos)
 	{
 		Map.Instance.SetBlockAndRecompute(new BlockData(), new Vector3i(Mathf.RoundToInt(cursor_pos.x), Mathf.RoundToInt(cursor_pos.y), Mathf.RoundToInt(cursor_pos.z)));
 	}

@@ -38,7 +38,7 @@ public class Chunk {
 	}
 	public void SetBlock(BlockData block, int x, int y, int z) {
 		blocks[z, y, x] = block;
-		chunkInNum[z,y,x] = block.block.Index;
+		chunkInNum[z,y,x] = block.block == null ? 0 : block.block.Index;
 	}
 	
 	public BlockData GetBlock(Vector3i pos) {
