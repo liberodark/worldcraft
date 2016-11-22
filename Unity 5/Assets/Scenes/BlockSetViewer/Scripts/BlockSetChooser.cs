@@ -39,7 +39,7 @@ public class BlockSetChooser : MonoBehaviour {
 		GUILayout.BeginArea(position, GUI.skin.box);
 		scrollPosition = GUILayout.BeginScrollView(scrollPosition);
 		for(int i=0; i<list.Length; i++) {
-			if( DrawItem(list[i].name, i == selected) ) {
+			if(list[i] != null && DrawItem(list[i].name, i == selected) ) {
 				selected = i;
 				Event.current.Use();
 			}

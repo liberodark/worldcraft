@@ -166,10 +166,14 @@ public class Builder : MonoBehaviour {
 		}
 		
 		Vector3i? cursor = GetCursor(true);
-		this.cursor.SetActive(cursor.HasValue);
-		if(cursor.HasValue) {
-			this.cursor.transform.position = cursor.Value;
-		}
+        if (cursor != null)
+        {
+            this.cursor.SetActive(cursor.HasValue);
+            if (cursor.HasValue)
+            {
+                this.cursor.transform.position = cursor.Value;
+            }
+        }
 		
 	}
 
