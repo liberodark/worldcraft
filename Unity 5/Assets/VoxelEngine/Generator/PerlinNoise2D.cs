@@ -127,10 +127,13 @@ public class NoiseArray2D {
 		
     }
 	
-	public float GetNoise(int x, int y) {
-		x -= offset.x;
-		y -= offset.y;
-		return map[x+1, y+1];
+
+    public float GetNoise(int x, int y) {
+        x -= offset.x;
+        y -= offset.y;
+        x += 1;
+        y += 1;
+        return map[x, y];
 	}
 	
 }

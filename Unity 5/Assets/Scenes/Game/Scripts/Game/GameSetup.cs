@@ -3,28 +3,26 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class GameSetup : MonoBehaviour {
-	
+    public static bool isEnable = true;
 	public static BlockSet blockSet;
 
     void Awake()
     {
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-        GameStateManager.IsPaused = true;
     }
 
     private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (blockSet != null)
+        if (blockSet != null && isEnable)
         {
-            Map map = GetComponent<Map>();
-            if (map != null)
-            {
-                map.SetBlockSet(blockSet);
-            }
+            GetComponent<Map>().SetBlockSet(blockSet);
         }
     }
 
- //   void OnLevelWasLoaded(int level) {
-	//}
-	
+    //   void OnLevelWasLoaded(int level) {
+    //}
+    public void OnDestroy()
+    {
+        isEnable = false;
+    }
 }

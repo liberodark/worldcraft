@@ -22,8 +22,11 @@ public class DontDestroyOnLoad : MonoBehaviour
 
     void LoadScene(Scene scene, LoadSceneMode mode)
     {
-        SceneManager.LoadScene(this._accepted_level);
-        Destroy(this.gameObject);
+        // SceneManager.LoadScene(this._accepted_level);
+        if (this != null)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     #endregion
